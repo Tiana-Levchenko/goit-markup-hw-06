@@ -91,9 +91,7 @@ address {
 }
 /* ========== /Hero Section ========= */
 /* ========== Our Benefits ========= */
-.name {
-    background-color: #FFFFFF;
-}
+
 .our-benefits-list {
     font-weight: 500;
     font-size: 20px;
@@ -109,6 +107,9 @@ address {
 
 /* ========== /Our Benefits ========= */
 /* ========== Our Team ========= */
+.name {
+    background-color: #FFFFFF;
+}
 .our-team {
     background-color: #f4f4fd;
 }

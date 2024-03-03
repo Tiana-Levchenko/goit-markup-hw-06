@@ -226,11 +226,13 @@ address {
 .name {
   background-color: #ffffff;
   width: calc((100% - 72px) / 4);
+  border-radius: 0 0 4px 4px;
 }
 
-.our-team-photo {
-  margin-bottom: 32px;
+.our-team-name-info {
+  padding: 32px 0;
 }
+
 .our-team-list-title {
   font-weight: 500;
   font-size: 20px;
@@ -247,7 +249,6 @@ address {
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
-  margin-bottom: 32px;
 }
 /* ========== /Our Team ========= */
 /* ========== Portfolio ========= */

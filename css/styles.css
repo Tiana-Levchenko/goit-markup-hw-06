@@ -18,11 +18,11 @@ p {
 
 ul,
 ol {
-  list-style-type: none;
-  color: inherit;
+  padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
+  list-style-type: none;
+  color: inherit;
 }
 
 a {
@@ -58,23 +58,23 @@ img {
   align-items: center;
 }
 
-.menu {
-  display: flex;
-  column-gap: 40px;
-}
-
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  margin-right: 76px;
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  margin-right: 76px;
 }
 .logo-part {
   color: #2e2f42;
+}
+
+.menu {
+  display: flex;
+  column-gap: 40px;
 }
 
 .menu-link {
@@ -91,13 +91,15 @@ img {
 .menu-link:focus {
   color: #404bbf;
 }
+
 address {
   font-style: normal;
 }
 
-.contact-address {
+.contact-list {
   display: flex;
   padding: 24px 0;
+  gap: 40px;
 }
 
 .contact-item {
@@ -125,14 +127,16 @@ address {
   padding-right: 330px;
 }
 .hero-title {
-  max-width: 496px;
-  margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  max-width: 496px;
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-btn {
   display: block;
@@ -148,6 +152,7 @@ address {
   border-radius: 4px;
   color: #fff;
   background: #4d5ae5;
+  border: none;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -155,13 +160,38 @@ address {
 }
 /* ========== /Hero Section ========= */
 /* ========== Our Benefits ========= */
+.our-benefits {
+  padding: 120px 0;
+}
 
-.our-benefits-title-list {
+.our-benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.our-benefits-list-item {
+  width: calc((100% - 72px) / 4);
+}
+.our-benefits-title.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.our-benefits-list-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .our-benefits-discription {
   font-size: 16px;
@@ -171,12 +201,13 @@ address {
 
 /* ========== /Our Benefits ========= */
 /* ========== Our Team ========= */
-.name {
-  background-color: #ffffff;
-}
+
 .our-team {
   background-color: #f4f4fd;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
+
 .our-team-title {
   font-size: 36px;
   line-height: 1.11;
@@ -184,24 +215,62 @@ address {
   text-transform: capitalize;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 72px;
 }
+
 .our-team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.name {
+  background-color: #ffffff;
+  width: calc((100% - 72px) / 4);
+}
+
+.our-team-photo {
+  margin-bottom: 32px;
+}
+.our-team-list-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
+
 .our-team-description {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
   color: #434455;
+  margin-bottom: 32px;
 }
 /* ========== /Our Team ========= */
 /* ========== Portfolio ========= */
+
+.portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  row-gap: 48px;
+}
+
+.portfolio-list-item-info {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
 .portfolio-title {
   font-size: 36px;
   line-height: 1.11;
@@ -209,23 +278,29 @@ address {
   text-transform: capitalize;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 72px;
 }
-.portfolio-list {
+
+.portfolio-list-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
-.portfolio-discription {
+.portfolio-list-discription {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-/* ========== /Portfolio ========= */
+
+/* ===========  /Portfolio========= */
 /* ========== Footer ========= */
 .page-footer {
   background-color: #2e2f42;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .logo-footer {
   font-family: "Raleway", sans-serif;
@@ -235,6 +310,8 @@ address {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  display: inline-block;
+  margin-bottom: 16px;
 }
 .logo-footer-part {
   color: #f4f4fd;
@@ -244,5 +321,6 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  max-width: 264px;
 }
 /* ========== /Footer ========= */

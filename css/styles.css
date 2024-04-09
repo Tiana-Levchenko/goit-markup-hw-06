@@ -425,10 +425,11 @@ address {
 .footer-wrapper {
   display: flex;
   gap: 120px;
-  align-items: start;
+  align-items: baseline;
 }
 
 .logo-footer-wrapper {
+  margin-right: 120px;
 }
 
 .logo-footer {
@@ -485,12 +486,13 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition-property: color;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-svg {
+  fill: #f4f4fd;
 }
 
 .footer-social-link-link:hover,

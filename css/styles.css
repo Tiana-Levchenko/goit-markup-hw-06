@@ -155,8 +155,6 @@ address {
     url(/images/people-office.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1440px;
-  background-position: center center;
 }
 .hero-container {
 }
@@ -230,6 +228,9 @@ address {
   background: #f4f4fd;
   margin-bottom: 8px;
   padding: 24px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .our-benefits-icon {
 }

@@ -155,10 +155,10 @@ address {
     url(/images/people-office.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  max-width: 1440px;
+  background-position: center center;
 }
 .hero-container {
-  max-width: 1440px;
-  background-position: center;
 }
 .hero-title {
   font-weight: 700;

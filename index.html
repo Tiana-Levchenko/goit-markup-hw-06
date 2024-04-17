@@ -482,30 +482,34 @@
             </div>
           </div>
 
-          <label class="modal-label" for="user-comment">Comment</label>
-          <textarea 
-            class="modal-comment" 
-            name="user-comment" 
-            id="user-comment" 
-            placeholder="Text input"
-            ></textarea>
+          <div class="modal-comment-wrap">
+            <label class="modal-label" for="user-comment">Comment</label>
+            <textarea 
+              class="modal-comment" 
+              name="user-comment" 
+              id="user-comment" 
+              placeholder="Text input"
+              ></textarea>
+          </div>
 
-          <input 
-            class="modal-check visually-hidden"
-            type="checkbox"
-            name="privacy-policy"
-            id="privacy-policy"
-          />
-          <label 
-            class="modal-check-text" 
-            for="privacy-policy">
-            <span class="fake-checkbox">
-              <svg class="agree-icon" width="10" height="8">
-                <use href="./images/icons.svg#icon-agree"></use>
-              </svg>
-            </span>I accept the terms and conditions of the 
-            <a class="privacy-policy-link" href="">Privacy Policy</a>
-          </label>
+          <div class="modal-checkbox-wrap">
+            <input 
+              class="modal-check visually-hidden"
+              type="checkbox"
+              name="privacy-policy"
+              id="privacy-policy"
+            />
+            <label 
+              class="modal-check-text" 
+              for="privacy-policy">
+              <span class="fake-checkbox">
+                <svg class="agree-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-agree"></use>
+                </svg>
+              </span>I accept the terms and conditions of the 
+              <a class="privacy-policy-link" href="">Privacy Policy</a>
+            </label>
+          </div>
 
           <button class="send-form-btn" type="submit">Send</button>
         </form>

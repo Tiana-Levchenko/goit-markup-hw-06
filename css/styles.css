@@ -647,6 +647,9 @@ address {
 
 .modal-form {
 }
+.modal-label-input-wrap {
+  margin-bottom: 8px;
+}
 .modal-label {
   display: block;
   margin-bottom: 4px;
@@ -658,7 +661,6 @@ address {
 }
 .modal-input-wrap {
   position: relative;
-  margin-bottom: 8px;
 }
 .modal-input {
   width: 100%;

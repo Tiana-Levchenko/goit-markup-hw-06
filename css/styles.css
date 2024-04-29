@@ -53,7 +53,7 @@ img {
 }
 
 .container {
-  width: 320px;
+  max-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
   margin-left: auto;
@@ -72,6 +72,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 16px;
 }
 
 .page-nav {
@@ -87,7 +88,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  margin-right: 76px;
 }
 .logo-part {
   color: #2e2f42;
@@ -161,8 +161,12 @@ address {
   padding: 0;
   /* width: 24px;
   height: 24px; */
+  line-height: 0;
   background-color: transparent;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .mob-menu-open-icon {
   width: 24px;
@@ -174,23 +178,47 @@ address {
   position: fixed;
   top: 0;
   background-color: #fff;
+  padding: 72px 16px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .mob-menu-close-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  top: 24px;
+  right: 24px;
   width: 24px;
   height: 24px;
   border-radius: 100%;
-  fill: #e7e9fc;
-  stroke-width: 1px;
-  stroke: #2e2f42;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mob-menu-close-btn:focus {
+  background-color: #e7e9fc;
 }
 .mob-menu-close-icon {
+  fill: #2e2f42;
 }
 
 .mob-menu-nav {
+  margin-bottom: auto;
 }
 
 .mob-menu-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .mob-menu-nav-item {
@@ -213,9 +241,13 @@ address {
 }
 
 .mob-menu-contact {
+  margin-bottom: 48px;
 }
 
 .mob-menu-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .mob-menu-contact-item {
@@ -233,6 +265,52 @@ address {
 }
 .mob-menu-contact-link:focus {
   color: #4d5ae5;
+}
+
+.header-social-link-wrapper {
+  text-align: center;
+}
+
+.header-social-link-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.header-social-link-list {
+  display: flex;
+
+  gap: 40px;
+}
+
+.header-social-link-item {
+  width: 40px;
+  height: 40px;
+}
+
+.header-social-link-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-svg {
+  fill: #f4f4fd;
+}
+
+.header-social-link-link:hover,
+.header-social-link-link:focus {
+  background-color: #31d0aa;
 }
 
 /* ========== /Page Header Styles ========= */
@@ -522,10 +600,12 @@ address {
 .footer-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 72px;
 }
 
 .logo-footer-wrapper {
-  margin: 0px auto 72px auto;
+  margin: 0px auto;
   display: flex;
   flex-direction: column;
 }
@@ -557,7 +637,6 @@ address {
 
 .footer-social-link-wrapper {
   text-align: center;
-  margin-bottom: 72px;
 }
 
 .footer-social-link-text {
@@ -571,7 +650,6 @@ address {
 
 .footer-social-link-list {
   display: flex;
-  justify-content: center;
   gap: 16px;
 }
 
@@ -892,11 +970,29 @@ address {
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   /* ========== Common Styles ========= */
   .container {
-    width: 768px;
+    max-width: 768px;
   }
   /* ============== /Common Styles ==========*/
   /* ========== Page Header Styles ========= */
+  .page-header-container {
+    padding: 0 16px;
+  }
+  .logo {
+    margin-right: 120px;
+  }
+  .menu {
+    display: flex;
+    gap: 40px;
+  }
 
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .mob-menu-open-btn {
+    display: none;
+  }
   /* ========== /Page Header Styles ========= */
   /* ========== Hero Section  ========= */
   .hero {
@@ -1005,13 +1101,27 @@ address {
 @media screen and (min-width: 1158px) {
   /* ========== Common Styles ========= */
   .container {
-    width: 1158px;
+    min-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
   }
   /* ============== /Common Styles ==========*/
   /* ========== Page Header Styles ========= */
-
+  .page-header-container {
+    padding: 0;
+  }
+  .logo {
+    margin-right: 76px;
+  }
+  .menu {
+    display: flex;
+  }
+  .contact-list {
+    display: flex;
+  }
+  .mob-menu-open-btn {
+    display: none;
+  }
   /* ========== /Page Header Styles ========= */
   /* ========== Hero Section  ========= */
   .hero {
@@ -1056,6 +1166,7 @@ address {
     width: calc((100% - 72px) / 4);
   }
   .our-benefits-list-title {
+    text-align: start;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -1093,6 +1204,7 @@ address {
   }
   .footer-wrapper {
     flex-direction: row;
+    gap: unset;
   }
   .logo-footer-wrapper {
     margin: 0 120px 0 0;
